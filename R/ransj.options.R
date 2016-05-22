@@ -8,34 +8,34 @@
 #' @param ... \code{isNameRec},\code{isNumRec},\code{isQuantifierRec} can be defined by the way as \code{\link{options}}.
 #' @return No results.
 
-segment.options <- function(...) {
+ransj.options <- function(...) {
   arglist <- list(...)
   arglist <- arglist[nzchar(names(arglist))]
   argnames <- names(arglist)
   if (length(arglist) > 0) {
     for (i in 1:length(arglist)) {
-      if (argnames[i] == "isNameRecognition") {
+      if (argnames[i] == "isNameRec") {
         eval(parse(text = paste("options(", argnames[i], "=", arglist[[i]], ")")))
         if (identical(arglist[[i]], TRUE)) {
-          .jcall("org.jtansj.util.AnsjOptions", "V", "setIsNameRec", TRUE)
+          .jcall("org/jtansj/util/AnsjOptions", "V", "setIsNameRec", TRUE)
         } else {
-          .jcall("org.jtansj.util.AnsjOptions", "V", "setIsNameRec", FALSE)
+          .jcall("org/jtansj/util/AnsjOptions", "V", "setIsNameRec", FALSE)
         }
       }
-      if (argnames[i] == "isNumRecognition") {
+      if (argnames[i] == "isNumRec") {
         eval(parse(text = paste("options(", argnames[i], "=", arglist[[i]], ")")))
         if (identical(arglist[[i]], TRUE)) {
-          .jcall("org.jtansj.util.AnsjOptions", "V", "setIsNumRec", TRUE)
+          .jcall("org/jtansj/util/AnsjOptions", "V", "setIsNumRec", TRUE)
         } else {
-          .jcall("org.jtansj.util.AnsjOptions", "V", "setIsNumRec", FALSE)
+          .jcall("org/jtansj/util/AnsjOptions", "V", "setIsNumRec", FALSE)
         }
       }
-      if (argnames[i] == "isQuantifierRecognition") {
+      if (argnames[i] == "isQuantifierRec") {
         eval(parse(text = paste("options(", argnames[i], "=", arglist[[i]], ")")))
         if (identical(arglist[[i]], TRUE)) {
-          .jcall("org.jtansj.util.AnsjOptions", "V", "setIsQuantifierRec", TRUE)
+          .jcall("org/jtansj/util/AnsjOptions", "V", "setIsQuantifierRec", TRUE)
         } else {
-          .jcall("org.jtansj.util.AnsjOptions", "V", "setIsQuantifierRec", FALSE)
+          .jcall("org/jtansj/util/AnsjOptions", "V", "setIsQuantifierRec", FALSE)
         }
       }
     }
