@@ -14,32 +14,25 @@ library(ransj)
 ***
 第一次调用segment函数时会有些慢，因为要加载用户字典和CRF模型。但第二次就很快了。
 ### 默认设置，两种输出格式
-`{R}
-segment("让战士们度过一个快乐祥和的春节。")
+	segment("让战士们度过一个快乐祥和的春节。")
 
-segment("让战士们度过一个快乐祥和的春节。", returnType="vector")
-`
+	segment("让战士们度过一个快乐祥和的春节。", returnType="vector")
 ### 词性标注，两种输出格式
-`
-segment("让战士们度过一个快乐祥和的春节。", nature=TRUE) # 词性标注。POS tagging
+	segment("让战士们度过一个快乐祥和的春节。", nature=TRUE) # 词性标注。POS tagging
+	
+	segment("让战士们度过一个快乐祥和的春节。", nature=TRUE, returnType="vector") # 词性标注。POS tagging
 
-segment("让战士们度过一个快乐祥和的春节。", nature=TRUE, returnType="vector") # 词性标注。POS tagging
-`
 ### 停用词过滤
-`
-insertStopwords(c("一个","的"))
+	insertStopwords(c("一个","的"))
+	
+	showStopwords()
+	
+	segment("让战士们度过一个快乐祥和的春节。", stopwords=TRUE)
+	
+	clearStopwords()
+	
+	showStopwords
 
-showStopwords()
-
-segment("让战士们度过一个快乐祥和的春节。", stopwords=TRUE)
-
-clearStopwords()
-
-showStopwords
-`
 ### 词性过滤
-`
-segment("让战士们度过一个快乐祥和的春节。", naturesInclude = c("n", "ns"))
-
-segment("让战士们度过一个快乐祥和的春节。", naturesRemove = c("n", "ns"))
-`
+	segment("让战士们度过一个快乐祥和的春节。", naturesInclude = c("n", "ns"))
+	segment("让战士们度过一个快乐祥和的春节。", naturesRemove = c("n", "ns"))
