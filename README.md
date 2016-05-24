@@ -14,7 +14,7 @@ library(ransj)
 ***
 第一次调用segment函数时会有些慢，因为要加载用户字典和CRF模型。但第二次就很快了。
 ### 默认设置，两种输出格式
-`
+`{R}
 segment("让战士们度过一个快乐祥和的春节。")
 
 segment("让战士们度过一个快乐祥和的春节。", returnType="vector")
