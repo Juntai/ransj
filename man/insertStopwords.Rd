@@ -23,6 +23,6 @@ clearStopwords()
 }
 }
 \seealso{
-\code{\link{showStopWords}},\code{\link{clearStopWords}}
+\code{\link{showStopwords}},\code{\link{clearStopwords}}
 }
 

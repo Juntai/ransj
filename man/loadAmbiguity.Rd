@@ -9,8 +9,10 @@ loadAmbiguity(path)
 \arguments{
 \item{path}{charater, file path of the dictionary. The suffix of the
 dictionary should be ".dic". There should be only one word per line.
-Every line should be formated like "ChineseWords\tabFirstSegmentWord\tabPOS\tab
-SecondSegmentWord\tabPOS...".}
+Terms in each line should be separated by Tab, such as:
+\tabular{lcrlcr}{
+ChineseWords \tab FirstSegmentWord \tab POS \tab SecondSegmentWord \tab POS \tab ... \cr
+}}
 }
 \value{
 No results.

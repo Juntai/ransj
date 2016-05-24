@@ -1,6 +1,12 @@
 .onLoad = function(libname, pkgname){
   options(java.parameters = "-Xmx800m")
-  .jpackage(pkgname, lib.loc=libname)
+  # .jpackage(pkgname, lib.loc=libname)
+  .jinit()
+  dir = system.file("java", package = pkgname)
+  jar = list.files(path=dir, pattern = ".jar", full.names=TRUE)
+  .jaddClassPath(jar)
+  warning(.jclassPath())
+  warning(libname,":",pkgname)
   # Set three options of segmentation
   ransj.options(isNameRec = TRUE)
   ransj.options(isNumRec = TRUE)
@@ -18,7 +24,7 @@
 }
 
 
-.onUnload <- function(libpath) {
-  rm(.ransjEnv, envir = .GlobalEnv)
-  library.dynam.unload("ransj", libpath)
-}
+# .onUnload <- function(libpath) {
+#   rm(.ransjEnv, envir = .GlobalEnv)
+#   library.dynam.unload("ransj", libpath)
+# }

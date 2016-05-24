@@ -4,7 +4,10 @@
 #'
 #' @param path charater, file path of the dictionary, or folder path to load all
 #' the .dic files. The suffix of the dictionary should be ".dic". There should be
-#' only one word per line. Every line should be formated like "Word\tabPOS\tabFrequency".
+#' only one word per line. Terms in each line should be separated by Tab, such as
+#' \tabular{lcr}{
+#' Word \tab POS \tab Frequency \cr
+#' }
 #'
 #' @return No results.
 #' @examples
@@ -24,7 +27,7 @@ loadDict = function(path){
 #' Clear up user defined dictionary
 #'
 #' @description  Clear up user defined dictionary.
-#'
+#' @return No results.
 #' @examples
 #' \dontrun{
 #' clearDict()

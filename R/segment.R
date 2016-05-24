@@ -32,6 +32,7 @@
 #' @param naturesRemove Character vector. The natures to be removed from the result.
 #' Default = NULL.Note that if naturesInclude and naturesRemove are both not null,
 #' naturesRemove will be ignored.
+#' @param nosymbol logical. Whether to keep symbols in the result. Default = TRUE.
 #' @param returnType A character from \code{c("vector", "tm")}. "vector" means
 #' that the result returned will be a vector containing the words. "tm" means
 #' that the result returned will be a character in which each word is separated

@@ -2,7 +2,7 @@
 #' @description Insert stopwords from a character vector.
 #' @param stopwords A character vector.
 #' @return No results.
-#' @seealso \code{\link{showStopWords}},\code{\link{clearStopWords}}
+#' @seealso \code{\link{showStopwords}},\code{\link{clearStopwords}}
 #' @examples
 #' \dontrun{
 #' insertStopwords(c("of", "at"))

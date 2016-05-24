@@ -6,6 +6,9 @@
 \usage{
 clearDict()
 }
+\value{
+No results.
+}
 \description{
 Clear up user defined dictionary.
 }
