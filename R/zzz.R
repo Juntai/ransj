@@ -5,8 +5,6 @@
   dir = system.file("java", package = pkgname)
   jar = list.files(path=dir, pattern = ".jar", full.names=TRUE)
   .jaddClassPath(jar)
-  warning(.jclassPath())
-  warning(libname,":",pkgname)
   # Set three options of segmentation
   ransj.options(isNameRec = TRUE)
   ransj.options(isNumRec = TRUE)
