@@ -6,10 +6,11 @@ nlp分词方法使用了CRF模型，词性标注使用了HMM模型。
 
 ## 安装
 ***
-`
-devtools::install_github("Juntai/ransj")
-library(ransj)
-`
+
+	devtools::install_github("Juntai/ransj")
+
+	library(ransj)
+
 ## 使用示例
 ***
 第一次调用segment函数时会有些慢，因为要加载用户字典和CRF模型。但第二次就很快了。
