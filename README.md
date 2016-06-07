@@ -32,7 +32,7 @@ nlp分词方法使用了CRF模型，词性标注使用了HMM模型。
 	
 	clearStopwords()
 	
-	showStopwords
+	showStopwords()
 
 ### 词性过滤
 	segment("让战士们度过一个快乐祥和的春节。", naturesInclude = c("n", "ns"))
